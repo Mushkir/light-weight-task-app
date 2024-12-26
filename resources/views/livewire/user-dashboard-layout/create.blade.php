@@ -6,17 +6,28 @@
         {{-- Title --}}
         <div class="formInputGroups">
             <label for="title" class=" font-semibold text-gray-700">Title<span class=" text-red-500">*</span></label>
-            <input type="text" id="title" class=" bg-slate-200 border-none rounded-md" name="title"
-                placeholder="Enter the task title" required>
+            <input type="text" wire:model="title" id="title" class=" bg-slate-200 border-none rounded-md"
+                name="title" placeholder="Enter the task title">
+
+            {{-- Error msg for title --}}
+            @error('title')
+                <span class="text-red-500 text-sm">{{ $message }}</span>
+            @enderror
         </div>
 
         {{-- Description --}}
         <div class="formInputGroups">
             <label for="description" class=" font-semibold text-gray-700">Description<span
                     class=" text-red-500">*</span></label>
-            <textarea id="description" class=" bg-slate-200 border-none rounded-md" name="description" rows="5"></textarea>
+            <textarea id="description" wire:model="description" class=" bg-slate-200 border-none rounded-md" name="description"
+                rows="5"></textarea>
+
+            {{-- Error msg for description --}}
+            @error('description')
+                <span class="text-red-500 text-sm">{{ $message }}</span>
+            @enderror
         </div>
 
-        <button class="main-button">Save</button>
+        <button class="main-button" wire:click.prevent="store">Save</button>
     </form>
 </div>
