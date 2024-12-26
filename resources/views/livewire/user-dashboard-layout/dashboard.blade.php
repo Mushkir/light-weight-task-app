@@ -6,20 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>
-        @yield('title')
+        {{ Auth::user()->name }}'s Dashboard
     </title>
 </head>
 
 <body>
-    {{-- Header part --}}
-    @include('dashboard')
+    <x-app-layout>
+        <x-slot name="header">
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+                {{ 'Dear ' . Auth::user()->name . '!' . __(' Here the summary of your tasks') }}
+            </h2>
+        </x-slot>
 
-    @section('content')
+        @include('livewire.user-dashboard-layout.create')
 
-    @show
-
-    {{-- Footer  --}}
-    @include('home.footer')
+    </x-app-layout>
 </body>
 
 </html>
