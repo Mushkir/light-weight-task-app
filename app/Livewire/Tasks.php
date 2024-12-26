@@ -10,8 +10,9 @@ use function Flasher\Prime\flash;
 
 class Tasks extends Component
 {
-    public $title, $description;
+    public $title, $description, $task_id;
     public $tasks;
+    public $edit_task_state = false;
 
     // Insert new task
     public function store()
@@ -29,6 +30,41 @@ class Tasks extends Component
 
         flash()->success('New task has been created successfully.');
         $this->resetInputs();
+    }
+
+    // Find task by id
+    public function edit($id)
+    {
+        $this->edit_task_state = true;
+
+        $task = Task::find($id);
+
+        $this->title = $task->title;
+        $this->description = $task->description;
+        $this->task_id = $task->id;
+    }
+
+    // Update task
+    public function update()
+    {
+        $validatedData = $this->validate([
+            'title' => 'required|min:3',
+            'description' => 'required|min:10',
+        ]);
+
+        $validatedData['user_id'] = Auth::id();
+
+        $task = Task::find($this->task_id);
+        $task->update($validatedData);
+
+        flash()->success('Task has been updated successfully.');
+        $this->resetInputs();
+        $this->edit_task_state = false;
+    }
+
+    public function cancelUpdate()
+    {
+        $this->edit_task_state = false;
     }
 
     private function resetInputs()
