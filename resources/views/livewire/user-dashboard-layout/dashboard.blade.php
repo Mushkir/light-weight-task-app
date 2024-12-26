@@ -8,9 +8,10 @@
     <title>
         {{ Auth::user()->name }}'s Dashboard
     </title>
+    @livewireStyles()
 </head>
 
-<body>
+<body class="font-Sen">
     <x-app-layout>
         <x-slot name="header">
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -18,9 +19,15 @@
             </h2>
         </x-slot>
 
-        @include('livewire.user-dashboard-layout.create')
+        <main class="min-h-screen">
+            @livewire('tasks')
+        </main>
+
+        @include('home.footer')
 
     </x-app-layout>
+
+    @livewireScripts()
 </body>
 
 </html>
