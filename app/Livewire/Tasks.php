@@ -62,15 +62,23 @@ class Tasks extends Component
         $this->edit_task_state = false;
     }
 
+    // Delete task
+    public function destroy($id)
+    {
+        Task::destroy($id);
+        flash()->success('Task ID No. ' . $id . ' has been deleted successfully.');
+    }
+
     public function cancelUpdate()
     {
         $this->edit_task_state = false;
+        $this->resetInputs();
     }
 
     private function resetInputs()
     {
         $this->title = "";
-        $this->description = '';
+        $this->description = "";
     }
 
 
