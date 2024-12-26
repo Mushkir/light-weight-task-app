@@ -16,7 +16,7 @@
     @livewireStyles()
 </head>
 
-<body class="font-sans antialiased dark:text-white/50">
+<body class="font-Sen antialiased dark:text-white/50">
 
     <div class="text-black/50 bg-slate-100">
 

@@ -1,4 +1,4 @@
-<div>
+<div class="font-Sen">
     @if ($edit_task_state)
         @include('livewire.user-dashboard-layout.edit')
     @else
