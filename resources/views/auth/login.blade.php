@@ -37,9 +37,9 @@
                 {{ __('Log in') }}
             </x-primary-button>
 
-            <div class="mt-3 flex items-center justify-between">
-                <small>Don't have an account? <a href="{{ route('register') }}"
-                        class=" text-gray-800 underline hover:text-red-800">Register</a></small>
+            <div class="mt-3 text-center flex flex-col sm:flex-row items-center justify-between space-y-2 sm:space-y-0">
+                <p class=" text-sm">Don't have an account? <a href="{{ route('register') }}"
+                        class=" text-gray-800 underline hover:text-red-800">Register</a></p>
 
                 @if (Route::has('password.request'))
                     <a class="underline text-sm text-gray-600 hover:text-red-800 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
