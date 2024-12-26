@@ -11,6 +11,7 @@ use function Flasher\Prime\flash;
 class Tasks extends Component
 {
     public $title, $description;
+    public $tasks;
 
     // Insert new task
     public function store()
@@ -39,7 +40,8 @@ class Tasks extends Component
 
     public function render()
     {
-        $this->resetInputs();
-        return view('livewire.tasks');
+        $no = 1;
+        $this->tasks = Task::where("user_id", Auth::id())->get();
+        return view('livewire.tasks', compact('no'));
     }
 }
