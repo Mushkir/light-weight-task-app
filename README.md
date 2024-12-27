@@ -21,3 +21,11 @@ With clear setup instructions and well-documented code, Task Track is easy to ru
 ![Homepage or Login page](https://i.ibb.co/C0B1H6w/screencapture-127-0-0-1-8000-2024-12-26-23-56-26.png)
 
 ![Register page](https://i.ibb.co/fC4zNQT/screencapture-127-0-0-1-8000-register-2024-12-26-23-59-18.png)
+
+![Add new task](https://i.ibb.co/9pTZj4j/screencapture-127-0-0-1-8000-dashboard-2024-12-27-09-24-29.png)
+
+![Edit task](https://i.ibb.co/hyJpRmJ/screencapture-127-0-0-1-8000-dashboard-2024-12-27-09-25-51.png)
+
+![Admin dashboard - Tasks panel](https://i.ibb.co/VwX21KK/screencapture-127-0-0-1-8000-admin-tasks-2024-12-27-09-27-20.png)
+
+![Admin dashboard - Users panel](https://i.ibb.co/z86ttCJ/screencapture-127-0-0-1-8000-admin-users-2024-12-27-09-28-51.png)

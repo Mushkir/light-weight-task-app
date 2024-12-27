@@ -85,7 +85,9 @@ class Tasks extends Component
     public function render()
     {
         $no = 1;
-        $this->tasks = Task::where("user_id", Auth::id())->get();
-        return view('livewire.tasks', compact('no'));
+        $user_id = Auth::id();
+        $this->tasks = Task::where("user_id", $user_id)->get();
+        $numberOfTasks = Task::where('user_id', $user_id)->count();
+        return view('livewire.tasks', compact('no', 'numberOfTasks'));
     }
 }
