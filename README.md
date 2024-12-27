@@ -72,7 +72,6 @@ npm install
 ```bash
 php artisan key:generate
 
-
 ```
 
 -   Run migrations
