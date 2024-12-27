@@ -29,3 +29,79 @@ With clear setup instructions and well-documented code, Task Track is easy to ru
 ![Admin dashboard - Tasks panel](https://i.ibb.co/VwX21KK/screencapture-127-0-0-1-8000-admin-tasks-2024-12-27-09-27-20.png)
 
 ![Admin dashboard - Users panel](https://i.ibb.co/z86ttCJ/screencapture-127-0-0-1-8000-admin-users-2024-12-27-09-28-51.png)
+
+## Installation and Setup
+
+-   Clone the Repo into Local machine:
+
+```bash
+  git clone https://github.com/Mushkir/light-weight-task-app.git
+
+```
+
+-   Navigate into the project directory:
+
+```bash
+cd light-weight-task-app
+
+```
+
+-   Install dependencies:
+
+##### Composer dependencies
+
+```bash
+composer install
+
+```
+
+#### NPM dependencies:
+
+```bash
+npm install
+
+```
+
+-   Set up the .env file:
+
+    -   Duplicate the .env.example file as .env:
+    -   Update environment-specific configurations like database credentials.
+
+-   Generate the application key (APP_KEY):
+
+```bash
+php artisan key:generate
+
+
+```
+
+-   Run migrations
+
+```bash
+php artisan migrate
+
+```
+
+### Run the project
+
+1. Open new terminal and run the following command:
+
+```bash
+npm run dev
+
+```
+
+2. Open another new terminal and run the following command:
+
+```bash
+php artisan serve
+
+```
+
+### License:
+
+-   MIT
+
+### Author
+
+-   [Mohamed Mushkir](https://www.facebook.com/profile.php?id=100059556802890)
